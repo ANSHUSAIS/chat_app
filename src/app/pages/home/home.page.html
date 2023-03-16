@@ -1,0 +1,319 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Janta Chat</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" id="click-trigger">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-popover trigger="click-trigger" triggerAction="click">
+      <ng-template>
+        <ion-content class="ion-padding">
+          <ion-label color="danger">Logout</ion-label>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+  </ion-toolbar>
+
+  <ion-segment value="{{ segments }}" (ionChange)="changeSegment($event)">
+    <ion-segment-button value="status">
+      <ion-label>Status</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="chats">
+      <ion-label>Chats</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="calls">
+      <ion-label>Calls</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+</ion-header>
+
+<ion-content color="light">
+  <ion-list *ngIf="segments == 'chats'" class="ion-padding-bottom" color="light">
+    <!-- <ion-list-header>
+      <ion-label>Recent Chats</ion-label>
+    </ion-list-header> -->
+    <ion-item (click)="redirectToChat()">
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/385" alt="">
+      </ion-avatar>
+      <ion-label>
+        Nausad
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/384" alt="">
+      </ion-avatar>
+      <ion-label>
+        Jaswant
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/387" alt="">
+      </ion-avatar>
+      <ion-label>
+        Samir
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/386" alt="">
+      </ion-avatar>
+      <ion-label>
+        Sangram
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/384" alt="">
+      </ion-avatar>
+      <ion-label>
+        Jaswant
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/387" alt="">
+      </ion-avatar>
+      <ion-label>
+        Samir
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/386" alt="">
+      </ion-avatar>
+      <ion-label>
+        Sangram
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/384" alt="">
+      </ion-avatar>
+      <ion-label>
+        Jaswant
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/387" alt="">
+      </ion-avatar>
+      <ion-label>
+        Samir
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/386" alt="">
+      </ion-avatar>
+      <ion-label>
+        Sangram
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/384" alt="">
+      </ion-avatar>
+      <ion-label>
+        Jaswant
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/387" alt="">
+      </ion-avatar>
+      <ion-label>
+        Samir
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.pravatar.cc/386" alt="">
+      </ion-avatar>
+      <ion-label>
+        Sangram
+        <p>
+          <ion-text>
+            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-text slot="end" color="medium">10:00 Am</ion-text>
+    </ion-item>
+    
+  </ion-list>
+
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom">
+    <ion-fab-button (click)="openModal()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-modal [isOpen]="new_chat" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cancel</ion-button>
+          </ion-buttons>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-list color="light" lines="none">
+          <ion-list-header>
+            <ion-label>Contacts</ion-label>
+          </ion-list-header>
+          <ion-item (click)="redirectToChat()">
+            <ion-avatar slot="start">
+              <img src="https://i.pravatar.cc/385" alt="">
+            </ion-avatar>
+            <ion-label>
+              Nausad
+              <p>
+                <ion-text>
+                  Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                </ion-text>
+              </p>
+            </ion-label>
+          </ion-item>
+      
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://i.pravatar.cc/384" alt="">
+            </ion-avatar>
+            <ion-label>
+              Jaswant
+              <p>
+                <ion-text>
+                  Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                </ion-text>
+              </p>
+            </ion-label>
+          </ion-item>
+      
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://i.pravatar.cc/387" alt="">
+            </ion-avatar>
+            <ion-label>
+              Samir
+              <p>
+                <ion-text>
+                  Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                </ion-text>
+              </p>
+            </ion-label>
+          </ion-item>
+      
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://i.pravatar.cc/386" alt="">
+            </ion-avatar>
+            <ion-label>
+              Sangram
+              <p>
+                <ion-text>
+                  Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                </ion-text>
+              </p>
+            </ion-label>
+          </ion-item>
+          
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

@@ -1,0 +1,39 @@
+ion-spinner{
+    color: #fff !important;
+}
+
+ion-textarea{
+    margin-left: 18px !important;
+}
+
+.receiver{
+    background: #45bd4a;
+    padding: 10px 10px 10px 20px;
+    color: #fff;
+    border-radius: 20px;
+    
+    .time{
+        color: #fff;
+        padding: 10px;
+    }
+    ion-icon{
+        font-size: 20px;
+        position: relative;
+        top: 4px;
+    }
+}
+
+.sender{
+    background: #ddd;
+    padding: 10px 10px 10px 20px;
+    color: #000;
+    border-radius: 20px;
+    
+    .time{
+        color: #000;
+        padding: 10px;
+    }
+    ion-icon{
+        font-size: 10px;
+    }
+}
